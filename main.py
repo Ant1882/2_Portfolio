@@ -11,7 +11,7 @@ with col1:
 with col2:
     st.title("Anthony Marshall")
     content = """
-    Hi, I am Anthony! I'm an Embedded Systems developer. I graduated in 2012 with a BEng(Hons) in Electronic Engineering
+    Hi, I'm Anthony! I'm an Embedded Systems Engineer. I graduated in 2012 with a BEng(Hons) in Electronic Engineering
     from the University of Central Lancashire.
     """
     st.info(content)
