@@ -1,20 +1,17 @@
 import smtplib, ssl
 import os
 
-host = "smtp.gmail.com"
-port = 465
+def send_email(message):
+    host = "smtp.gmail.com"
+    port = 465
 
-username = "info@awembedded.com"
-password = os.getenv("EMAIL_PASSWORD")
+    username = "info@awembedded.com"
+    password = os.getenv("EMAIL_PASSWORD")
 
-receiver = "info@awembedded.com"
-context = ssl.create_default_context()
-message = """\
-Subject:Hi, testing Python.
-Testing email from Python.
---Ant--
-"""
-
-with smtplib.SMTP_SSL(host, port, context=context) as server:
-    server.login(username, password)
-    server.sendmail(username, receiver, message)
+    receiver = "info@awembedded.com"
+    context = ssl.create_default_context()
+ 
+    with smtplib.SMTP_SSL(host, port, context=context) as server:
+        server.login(username, password)
+        server.sendmail(username, receiver, message)
+        
